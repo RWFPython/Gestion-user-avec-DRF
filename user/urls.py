@@ -5,6 +5,7 @@ from . import views
 app_name = 'user'
 
 urlpatterns = [
+    path('hello/', views.HelloView.as_view(), name='Hello'),
     path('create/', views.CreateUserView.as_view(), name='create'),
     path('token/', jwt_views.TokenObtainPairView.as_view(),
          name='token_obtain_pair'),

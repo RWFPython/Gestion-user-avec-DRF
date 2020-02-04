@@ -1,5 +1,6 @@
 from rest_framework import generics
-# from rest_framework.settings import api_settings
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from user.serializers import UserSerializer
 
@@ -19,3 +20,10 @@ class ManageUserView(generics.RetrieveUpdateAPIView):
         Retrieve and return authenticated user
         """
         return self.request.user
+
+class HelloView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request):
+        content = {'message': "Hello, World! you can this because you're athenticated"}
+        return Response(content)
