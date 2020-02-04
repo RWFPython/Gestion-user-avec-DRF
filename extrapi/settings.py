@@ -132,6 +132,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+AUTH_USER_MODEL = 'core.user'
+
 try:
     from .local_settings import *
 except ImportError:
