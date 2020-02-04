@@ -132,5 +132,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-# GEOTH_LIBRARY_PATH = config('GEOTH_LIBRARY_PATH')
-# GDAL_LIBRARY_PATH = config('GDAL_LIBRARY_PATH')
+try:
+    from .local_settings import *
+except ImportError:
+    pass
