@@ -56,7 +56,7 @@ ROOT_URLCONF = 'extrapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['https://apiextra.herokuapp.com/', '127.0.0.1'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 GEOTH_LIBRARY_PATH = config('GEOTH_LIBRARY_PATH')
 GDAL_LIBRARY_PATH = config('GDAL_LIBRARY_PATH')
