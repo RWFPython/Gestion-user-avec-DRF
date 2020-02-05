@@ -10,6 +10,7 @@ django-phonenumber-field>=4.0.0
 django-search-views>=0.3.7
 djangorestframework>=3.11.0
 djangorestframework-simplejwt>=4.4.0
+django_rest_passwordreset>=1.1.0
 entrypoints>=0.3
 flake8>=3.7.9
 future>=0.18.2
